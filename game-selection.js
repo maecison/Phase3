@@ -3,14 +3,17 @@ import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from 'rea
 import ticTacToeImage from './assets/tictactoe.png';
 import memoryGameImage from './assets/memory.png';
 import comingSoonImage from './assets/coming-soon.png';
+import { useNavigation } from '@react-navigation/native';
 
 const GameSelection = () => {
+    const navigation = useNavigation();
+    
   return (
     <View style={styles.container}>
       {/* ... */}
       <ScrollView style={styles.gameContainer}>
         <View style={styles.gameBox}>
-            <TouchableOpacity style={styles.touchableBox}>
+            <TouchableOpacity style={styles.touchableBox} onPress={() => navigation.navigate('TicTacToe')}>
                 <Image source={ticTacToeImage} style={styles.gameImage} />
             </TouchableOpacity>
             <Text style={styles.gameTitle}>Tic-Tac-Toe</Text>

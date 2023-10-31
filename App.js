@@ -4,6 +4,7 @@ import React from 'react';
 import LoginPage from './login-page';
 import GameSelection from './game-selection';
 import SignupPage from './sign-up';
+import TicTacToe from './tictactoeComponent/tictactoe';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,11 @@ export default function App() {
           name="GameSelection" 
           component={GameSelection} 
           options={{ title: 'Choose a game to challenge!' }}
+        />
+        <Stack.Screen 
+          name="TicTacToe" 
+          component={TicTacToe} 
+          options={{ title: 'Welcome to Tic-Tac-Toe!' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
