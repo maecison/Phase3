@@ -70,11 +70,15 @@ const TicTacToe = () => {
     // Display Winner
     useEffect(() => {
         const winner = winCheck(gamePiece);
+        const isBoardFull = gamePiece.every(square => square !== null);
+
         if (winner === 'X') {
             alert("Player X has WON!")
         } else if (winner === 'O') {
             alert("Player O has WON!")
-        }
+        } else if (isBoardFull) {
+            alert("It's a TIE!")
+    }
     }, [gamePiece])
     
     return (
@@ -131,7 +135,7 @@ const TicTacToe = () => {
 const styles = StyleSheet.create({
     body: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#EBF5FC',
     },
     playerInfo: {
         flexDirection: 'row',
