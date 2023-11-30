@@ -1,9 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import LoginPage from './login-page';
-import GameSelection from './game-selection';
-import SignupPage from './sign-up';
+import LoginPage from './loginComponent/login-page';
+import GameSelection from './gameSelectionComponent/game-selection';
+import SignupPage from './signUpComponent/sign-up';
 import TicTacToe from './tictactoeComponent/tictactoe';
 
 const Stack = createStackNavigator();
