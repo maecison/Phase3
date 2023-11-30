@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { TextInput, TouchableOpacity, StyleSheet, Text, ScrollView, Image } from 'react-native';
-import logoImage from './assets/logo.png';
+import logoImage from '../assets/logo.png';
 
 const LoginPage = ({ navigation }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
+        if (username === '' || password === '') {
+            alert('Both fields are required!');
+            return;
+        }
+    
         console.log(`Username: ${username}, Password: ${password}`);
         navigation.navigate('GameSelection');
     };

@@ -5,6 +5,7 @@ import LoginPage from './loginComponent/login-page';
 import GameSelection from './gameSelectionComponent/game-selection';
 import SignupPage from './signUpComponent/sign-up';
 import TicTacToe from './tictactoeComponent/tictactoe';
+import MemoryGame from './memoryGameComponent/memory-game';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,11 @@ export default function App() {
           name="TicTacToe" 
           component={TicTacToe} 
           options={{ title: 'Welcome to Tic-Tac-Toe!' }}
+        />
+        <Stack.Screen 
+          name="MemoryGame" 
+          component={MemoryGame} 
+          options={{ title: 'Test Your Memory!' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextInput, TouchableOpacity, StyleSheet, Text, ScrollView, Image } from 'react-native';
-import logoImage from './assets/logo.png';
+import logoImage from '../assets/logo.png';
 
 const SignupPage = ({navigation}) => {
     const [username, setUsername] = useState('');

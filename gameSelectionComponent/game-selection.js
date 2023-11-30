@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from 'react-native';
-import ticTacToeImage from './assets/tictactoe.png';
-import memoryGameImage from './assets/memory.png';
-import comingSoonImage from './assets/coming-soon.png';
+import ticTacToeImage from '../assets/tictactoe.png';
+import memoryGameImage from '../assets/memory.png';
+import comingSoonImage from '../assets/coming-soon.png';
 import { useNavigation } from '@react-navigation/native';
 
 const GameSelection = () => {
@@ -19,7 +19,7 @@ const GameSelection = () => {
             <Text style={styles.gameTitle}>Tic-Tac-Toe</Text>
         </View>
         <View style={styles.gameBox}>
-            <TouchableOpacity style={styles.touchableBox}>
+            <TouchableOpacity style={styles.touchableBox} onPress={() => navigation.navigate('MemoryGame')}>
                 <Image source={memoryGameImage} style={styles.gameImage} />
             </TouchableOpacity>
             <Text style={styles.gameTitle}>Test Your Memory</Text>
